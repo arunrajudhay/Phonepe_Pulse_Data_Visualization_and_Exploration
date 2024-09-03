@@ -61,7 +61,7 @@ if web=="GEO-VISUALIZATION":
                 col1,col2=slt.columns(2)
                 with col1:    
                     def agg_year1(year):
-                            conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+                            conn=mysql.connector.connect(host="localhost", user="root", password="your_password",database="phonepe")
                             my_cursor = conn.cursor()
                             my_cursor.execute(f'''select State,sum(Transaction_amount) from agg_trans
                                                 where year = "{year}" group by State
@@ -89,7 +89,7 @@ if web=="GEO-VISUALIZATION":
                 col1,col2=slt.columns(2)
                 with col1:
                     def map_U_year(year):
-                        conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+                        conn=mysql.connector.connect(host="localhost", user="root", password="your_password",database="phonepe")
                         my_cursor = conn.cursor()
                         my_cursor.execute(f'''select State,sum(user_count) from agg_user
                                                     where year = "{year}" group by State
@@ -126,7 +126,7 @@ if web=="GEO-VISUALIZATION":
                     col1,col2=slt.columns(2)
                     with col1:
                         def agg_insurance_yearQ1(year,quater):
-                                conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+                                conn=mysql.connector.connect(host="localhost", user="root", password="password",database="phonepe")
                                 my_cursor = conn.cursor()
                                 my_cursor.execute(f'''select State,sum(Transaction_amount) from agg_inc 
                                                         where Year="{year}"and Quater={quater} group by State
@@ -157,7 +157,7 @@ if web=="GEO-VISUALIZATION":
                     col1,col2,col3=slt.columns(3) 
                     with col1:
                         def agg_transaction_year(year,quater):
-                            conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+                            conn=mysql.connector.connect(host="localhost", user="root", password="your_password",database="phonepe")
                             my_cursor = conn.cursor()
                             my_cursor.execute(f'''select State,sum(Transaction_amount)as total_amount from agg_trans
                                                     where Year="{year}" and Quater={quater} group by State 
@@ -178,7 +178,7 @@ if web=="GEO-VISUALIZATION":
                         slt.plotly_chart(fix)
                         with col2:
                             def agg_transaction_year(year,quater):
-                                conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+                                conn=mysql.connector.connect(host="localhost", user="root", password="your_password",database="phonepe")
                                 my_cursor = conn.cursor()
                                 my_cursor.execute(f'''select Transaction_type,sum(Transaction_amount)as total_amount from agg_trans
                                                         where Year={year} and Quater={quater} group by Transaction_type 
@@ -200,7 +200,7 @@ if web=="GEO-VISUALIZATION":
                 col1,col2=slt.columns(2)
                 with col1:
                     def agg_user_year(year,quater):
-                        conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+                        conn=mysql.connector.connect(host="localhost", user="root", password="your_password",database="phonepe")
                         my_cursor = conn.cursor()
                         my_cursor.execute(f'''select State,user_Brand,sum(user_count)as total_count from agg_user
                                                 where Year={year} and Quater={quater} group by State,user_Brand
@@ -224,7 +224,7 @@ if web=="GEO-VISUALIZATION":
                 col1,col2=slt.columns(2)
                 with col1:
                     def map_insurance_year(year,quater):
-                        conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+                        conn=mysql.connector.connect(host="localhost", user="root", password="your_password",database="phonepe")
                         my_cursor = conn.cursor()
                         my_cursor.execute(f'''select District,sum(Transaction_amount)as total_amount from map_inc
                                                 where Year={year} and Quater={quater} group by District 
@@ -243,7 +243,7 @@ if web=="GEO-VISUALIZATION":
                 quater_trans = {"Q1": 1, "Q2": 2, "Q3": 3, "Q4": 4}
                 quater_value = quater_trans[Y_QT]
                 def map_transaction_year(year,quater):
-                    conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+                    conn=mysql.connector.connect(host="localhost", user="root", password="your_password",database="phonepe")
                     my_cursor = conn.cursor()
                     my_cursor.execute(f'''select District,sum(Transaction_amount)as total_amount from map_trans
                                         where Year={year} and Quater={quater} group by District
@@ -261,7 +261,7 @@ if web=="GEO-VISUALIZATION":
                     quater_trans = {"Q1": 1, "Q2": 2, "Q3": 3, "Q4": 4}
                     quater_value = quater_trans[Y_BT]
                     def map_user(year,quater):
-                        conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+                        conn=mysql.connector.connect(host="localhost", user="root", password="your_password",database="phonepe")
                         my_cursor = conn.cursor()
                         my_cursor.execute(f'''select District,sum(Registered_Users) as Total_user from map_user
                                                     where Year={year} and Quater={quater} group by District
@@ -282,7 +282,7 @@ if web=="GEO-VISUALIZATION":
                     quater_trans = {"Q1": 1, "Q2": 2, "Q3": 3, "Q4": 4}
                     quater_value = quater_trans[Y_TQ]  
                     def top_insurance_year(year,quater):
-                        conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+                        conn=mysql.connector.connect(host="localhost", user="root", password="your_password",database="phonepe")
                         my_cursor = conn.cursor()
                         my_cursor.execute(f'''select State,Pincode,sum(Transaction_amount)as total_amount from top_inc
                                                 where Year={year} and Quater={quater}  group by Pincode,State
@@ -299,7 +299,7 @@ if web=="GEO-VISUALIZATION":
                     quater_trans = {"Q1": 1, "Q2": 2, "Q3": 3, "Q4": 4}
                     quater_value = quater_trans[Y_A]
                     def top_transaction_year(year,quater):
-                        conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+                        conn=mysql.connector.connect(host="localhost", user="root", password="your_password",database="phonepe")
                         my_cursor = conn.cursor()
                         my_cursor.execute(f'''select State,Pincode,sum(Transaction_amount)as total_amount from top_trans
                                                 where Year={year} and Quater={quater} group by Pincode,State
@@ -316,7 +316,7 @@ if web=="GEO-VISUALIZATION":
                     quater_trans = {"Q1": 1, "Q2": 2, "Q3": 3, "Q4": 4}
                     quater_value = quater_trans[Y_B] 
                     def top_user(year,quater):
-                        conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+                        conn=mysql.connector.connect(host="localhost", user="root", password="your_password",database="phonepe")
                         my_cursor = conn.cursor()
                         my_cursor.execute(f'''select State,Pincode,sum(Registered_Users) as Total_user from top_user
                                                     where Year={year} and Quater={quater} group by Pincode,State
@@ -330,7 +330,7 @@ if web=="GEO-VISUALIZATION":
         #State-Analysis            
         with tab3:
              def states():
-                conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+                conn=mysql.connector.connect(host="localhost", user="root", password="password",database="phonepe")
                 my_cursor = conn.cursor()
                 my_cursor.execute("select State from agg_trans")
                 out=my_cursor.fetchall()
@@ -345,7 +345,7 @@ if web=="GEO-VISUALIZATION":
              quater_value = quater_trans[Y_SQ]
 
              def state_transaction(states_L,year,quater):
-                conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+                conn=mysql.connector.connect(host="localhost", user="root", password="password",database="phonepe")
                 my_cursor = conn.cursor()
                 query=('''select State, sum(Transaction_amount) as total_transaction_amount from agg_trans
                                   where State= %s and Year= %s and Quater=%s  group by State
@@ -360,7 +360,7 @@ if web=="GEO-VISUALIZATION":
              col1,col2=slt.columns(2)
              with col1:
                 def Type_transaction(states_L,year,quater):
-                    conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+                    conn=mysql.connector.connect(host="localhost", user="root", password="password",database="phonepe")
                     my_cursor = conn.cursor()
                     query=('''select State,Transaction_type,sum(Transaction_amount) as total_transaction_amount from agg_trans
                                     where State= %s and Year= %s and Quater= %s group by Transaction_type,State
@@ -376,7 +376,7 @@ if web=="GEO-VISUALIZATION":
               fix=px.pie(df_T,values="total_transaction_amount",names="Transaction_type",title=f'State-wise total transaction amount and type {S_A}-{Y_S}-{Y_SQ}')
               slt.plotly_chart(fix)
              def User_transaction(states_L,year,quater):
-                conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+                conn=mysql.connector.connect(host="localhost", user="root", password="password",database="phonepe")
                 my_cursor = conn.cursor()
                 query=('''select State,sum(Registered_Users) as total_Registered_Users from map_user
                                   where State= %s and Year= %s and Quater= %s group by State
@@ -403,7 +403,7 @@ if web=="Insights":
                                              "10.app opens in map_user?" ))
     if Questions=="1.Top 20 aggregate insurance-transaction amount in state wise?":
        if slt.button("SUBMIT"):
-            conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+            conn=mysql.connector.connect(host="localhost", user="root", password="password",database="phonepe")
             my_cursor = conn.cursor()
             my_cursor.execute('''select State,sum(Transaction_amount)as total_amount from agg_inc
                               group by State 
@@ -418,7 +418,7 @@ if web=="Insights":
 
     if Questions=="2.Top most aggregate transaction-count in state wise?":
        if slt.button("SUBMIT"):
-            conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+            conn=mysql.connector.connect(host="localhost", user="root", password="password",database="phonepe")
             my_cursor = conn.cursor()
             my_cursor.execute('''select Transaction_type,sum(Transaction_count) as count from agg_trans
                               group by Transaction_type
@@ -433,7 +433,7 @@ if web=="Insights":
             
     if Questions=="3.Top most map transaction count in district wise?":
        if slt.button("SUBMIT"):
-            conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+            conn=mysql.connector.connect(host="localhost", user="root", password="password",database="phonepe")
             my_cursor = conn.cursor()
             my_cursor.execute('''select District,sum(Transaction_count)as total_count from map_trans
                               group by District
@@ -448,7 +448,7 @@ if web=="Insights":
 
     if Questions=="4.Top most register user in district wise?":
         if slt.button("SUBMIT"):
-                conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+                conn=mysql.connector.connect(host="localhost", user="root", password="password",database="phonepe")
                 my_cursor = conn.cursor()
                 my_cursor.execute('''select District,sum(Registered_Users) as total_user from map_user
                                   group by District
@@ -463,7 +463,7 @@ if web=="Insights":
         
     if Questions=="5.Top most register user in pincode wise?":
         if slt.button("SUBMIT"):
-                conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+                conn=mysql.connector.connect(host="localhost", user="root", password="password",database="phonepe")
                 my_cursor = conn.cursor()
                 my_cursor.execute('''select State,Pincode,sum(Registered_Users) as total_user from top_user
                                   group by pincode,State
@@ -478,7 +478,7 @@ if web=="Insights":
 
     if Questions=="6.Top most brand user in transaction?":
         if slt.button("SUBMIT"):
-                conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+                conn=mysql.connector.connect(host="localhost", user="root", password="password",database="phonepe")
                 my_cursor = conn.cursor()
                 my_cursor.execute('''select user_Brand,sum(user_count) as "count" from agg_user
                                   Group by user_Brand
@@ -493,7 +493,7 @@ if web=="Insights":
                 
     if Questions=="7.lowest top-transaction amount in state wise?":
         if slt.button("SUBMIT"):
-                conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+                conn=mysql.connector.connect(host="localhost", user="root", password="password",database="phonepe")
                 my_cursor = conn.cursor()
                 my_cursor.execute('''select State,sum(Transaction_amount) as lowest_amount from agg_trans
                                   group by State
@@ -508,7 +508,7 @@ if web=="Insights":
 
     if Questions=="8.avg transaction amount in Tamilnadu?":
         if slt.button("SUBMIT"):
-                conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+                conn=mysql.connector.connect(host="localhost", user="root", password="password",database="phonepe")
                 my_cursor = conn.cursor()
                 my_cursor.execute('''select State,avg(Transaction_amount) as avg_amount 
                                   from agg_trans where State="Tamil Nadu"
@@ -520,7 +520,7 @@ if web=="Insights":
                 slt.write(que_8)
     if Questions=="9.which year has highest transaction in Karnataka?":
         if slt.button("SUBMIT"):
-                conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+                conn=mysql.connector.connect(host="localhost", user="root", password="password",database="phonepe")
                 my_cursor = conn.cursor()
                 my_cursor.execute('''select State,Year,max(Transaction_amount) as max_amount
                                   from agg_trans where State="Karnataka"
@@ -536,7 +536,7 @@ if web=="Insights":
 
     if Questions=="10.app opens in map_user?":
         if slt.button("SUBMIT"):
-                conn=mysql.connector.connect(host="localhost", user="root", password="Arunudhay2024",database="phonepe")
+                conn=mysql.connector.connect(host="localhost", user="root", password="password",database="phonepe")
                 my_cursor = conn.cursor()
                 my_cursor.execute('''select State,sum(App_Opens) as total from map_user
                                   group by State
