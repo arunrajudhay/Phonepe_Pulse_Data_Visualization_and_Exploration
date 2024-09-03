@@ -6,6 +6,23 @@
 2. We create a web app to analyse the Phonepe transaction and users depending on various Years, Quarters, States, and Types of transaction and give a Geographical and Geo visualization output based on given 
    requirements.
 
+## Table of Contents
+1. Key Technologies and Skills
+2. Installation
+3. Usage
+4. Features
+5. Contributing
+6. License
+7. Contact
+
+## Key Technologies and Skills
+1. Python
+2. PostgreSQL
+3. Pandas
+4. Plotly
+5. Streamlit
+
+
 
 
 
