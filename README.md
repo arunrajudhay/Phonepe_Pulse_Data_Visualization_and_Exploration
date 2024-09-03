@@ -12,7 +12,7 @@
 3. Usage
 4. Approach
 5. Learning outcomes of this project
-6. License
+6. Contribution
 7. Contact
 
 ## Pre-requisites:
@@ -52,13 +52,13 @@
 4. Users can access the dashboard from a web browser and easily navigate the different visualizations and facts and figures displayed.
 5. The dashboard provides valuable insights and information about the data in the Phonepe Pulse GitHub repository, making it a valuable tool for data analysis and decision-making.
 
-## Contributing:
+## Contribution:
 Contributions to this project are welcome! If you encounter any issues or have suggestions for improvements, please feel free to submit a pull request.
 
 ## Contact:
-If you encounter any issues or have suggestions for improvements, feel free to reach out.
 
 Email : [ruarunraj2013@gmail.com](mailto:ruarunraj2013@gmail.com)
+
 Linkedin : https://www.linkedin.com/in/arunraj-udayakumar-27722a146/
 
 Thanks for showing interest in this repository !
