@@ -36,6 +36,14 @@
 3. Run the Streamlit app
 4. Access the app in your browser
 
+## Approach
+1. Extraction of data from the Phonepe Pulse GitHub repository.
+2. Data transformation, cleaning, and pre-processing using Python and Pandas.
+3. Efficient storage and retrieval of data in a MySQL database.
+4. Creation of an interactive and visually appealing dashboard using Streamlit and Plotly.
+5. Dynamic data updates on the dashboard based on user selections.
+6. Multiple dropdown options for users to choose different facts and figures to display.
+7. Secure, efficient, and user-friendly solution.
 
 
 
